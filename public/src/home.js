@@ -12,8 +12,21 @@ function booksBorrowedCount(books) {
 }
 
 function getMostCommonGenres(books) {
-  
+  // // set up array to collect genres
+  const genres = books.map((book) => book.genre)
+  const uniqueGenre = genres.filter((gen, index) => genres.indexOf(gen) === index )
+  const mostPopular = []
+  for (let g in uniqueGenre){
+    const genre = uniqueGenre[g]
+    const count = genres.reduce((acc, gen) => {
+      if (gen === genre) {acc++}
+      return acc}, 0)
+    const objectVersion = {name: genre, count: count}
+    mostPopular.push(objectVersion)
+  }
+  return mostPopular.sort((genA, genB) => genA.count < genB.count ? 1 : -1).slice(0,5)
 }
+
 
 function getMostPopularBooks(books) {
   const mostPopular = []
