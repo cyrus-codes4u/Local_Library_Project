@@ -1,12 +1,6 @@
-## Function instructions
-
-The following functions can be completed in whichever order you choose. There are difficult problems associated with each page, so feel free to skip around as you work your way up to solving more challenging problems!
-
----
-
 ### Account functions
 
-![image.png](//res.cloudinary.com/strive/image/upload/w_1000,h_1000,c_limit/11c23e4622a87eab216668be31c759ac-image.png)
+
 
 #### findAccountById()
 
